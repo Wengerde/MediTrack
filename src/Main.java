@@ -5,8 +5,9 @@ public class Main {
         BenutzerVerwaltung benutzerVerwaltung = new BenutzerVerwaltung(); // Objekt der neuen Klasse erstellt
         benutzerVerwaltung.benutzerAnmeldung(); // Benutzeranmeldung aufrufen
 
-        // PatientenVerwaltung erstellen
+        // Patientenverwaltung und Medikamentenverwaltung erstellen
         PatientenVerwaltung patientenVerwaltung = new PatientenVerwaltung();
+        MedikamentenVerwaltung medikamentenVerwaltung = new MedikamentenVerwaltung();
 
         // Scanner erstellt, um Benutzereingaben zu lesen
         Scanner scanner = new Scanner(System.in);
@@ -17,8 +18,9 @@ public class Main {
             System.out.println("\nHauptmenü:");
             System.out.println("1. Patientenübersicht anzeigen");
             System.out.println("2. neuen Patient hinzufügen");
-            System.out.println("3. MedikamentenVerwalten");
-            System.out.println("3. Programm beenden");
+            System.out.println("3. Medikamentenübersicht anzeigen");
+            System.out.println("4. Neues Medikament hinzufügen");
+            System.out.println("5. Programm beenden");
             System.out.println("Wählen Sie eine Option: ");
             int auswahl = scanner.nextInt();
 
@@ -30,9 +32,12 @@ public class Main {
                     patientenVerwaltung.patientenHinzufuegen();
                     break;
                 case 3:
-                    System.out.println("Medikamentenverwalten.");
+                    medikamentenVerwaltung.zeigeMedikamentenUebersicht();
                     break;
                 case 4:
+                    medikamentenVerwaltung.medikamentHinzufuegen();
+                    break;
+                case 5:
                     System.out.println("Programm wird beendet.");
                     programmlaeuft = false;
                     break;
@@ -43,3 +48,4 @@ public class Main {
 
 }
 }
+
