@@ -5,6 +5,6 @@ public class BenutzerVerwaltung {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Bitte geben Sie Ihren Benutzernamen ein: ");
         String benutzername = scanner.nextLine();
-        System.out.println("Willkommen, " + benutzername + "!");
+        System.out.println("Willkommen bei MediTrack, " + benutzername + "!");
     }
 }

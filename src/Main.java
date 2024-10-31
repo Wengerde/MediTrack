@@ -5,10 +5,13 @@ public class Main {
         BenutzerVerwaltung benutzerVerwaltung = new BenutzerVerwaltung(); // Objekt der neuen Klasse erstellt
         benutzerVerwaltung.benutzerAnmeldung(); // Benutzeranmeldung aufrufen
 
+        // PatientenVerwaltung erstellen
+        PatientenVerwaltung patientenVerwaltung = new PatientenVerwaltung();
+
         // Scanner erstellt, um Benutzereingaben zu lesen
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Willkommen zu MediTrack!");
+
         boolean programmlaeuft = true;
 
         // Hauptmenü-Schleife
@@ -22,7 +25,7 @@ public class Main {
 
             switch (auswahl) {
                 case 1:
-                    zeigePatientenuebersicht();
+                    PatientenVerwaltung.zeigePatientenuebersicht();
                     break;
                 case 2:
                     System.out.println("Medikamentenverwaltung wird gestartet...");
@@ -35,9 +38,6 @@ public class Main {
                     System.out.println("Ungültige Auswahl, bitte erneut versuchen.");
             }
         }
-    }
-    // Methode zur Anzeige der Patientenübersicht
-    public static void zeigePatientenuebersicht() {
-        System.out.println("Patientenübersicht wird angezeigt...");
-    }
+
+}
 }
