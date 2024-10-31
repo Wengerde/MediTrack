@@ -10,15 +10,14 @@ public class Main {
 
         // Scanner erstellt, um Benutzereingaben zu lesen
         Scanner scanner = new Scanner(System.in);
-
-
         boolean programmlaeuft = true;
 
         // Hauptmenü-Schleife
         while (programmlaeuft) {
             System.out.println("\nHauptmenü:");
             System.out.println("1. Patientenübersicht anzeigen");
-            System.out.println("2. Medikamentenverwaltung");
+            System.out.println("2. neuen Patient hinzufügen");
+            System.out.println("3. MedikamentenVerwalten");
             System.out.println("3. Programm beenden");
             System.out.println("Wählen Sie eine Option: ");
             int auswahl = scanner.nextInt();
@@ -28,9 +27,12 @@ public class Main {
                     PatientenVerwaltung.zeigePatientenuebersicht();
                     break;
                 case 2:
-                    System.out.println("Medikamentenverwaltung wird gestartet...");
+                    patientenVerwaltung.patientenHinzufuegen();
                     break;
                 case 3:
+                    System.out.println("Medikamentenverwalten.");
+                    break;
+                case 4:
                     System.out.println("Programm wird beendet.");
                     programmlaeuft = false;
                     break;

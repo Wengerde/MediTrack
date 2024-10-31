@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class PatientenVerwaltung {
     private static ArrayList<Patient> patientenListe;
@@ -17,6 +18,20 @@ public static void zeigePatientenuebersicht() {
     for (Patient patient : patientenListe) {
         System.out.println("Name: " + patient.getName() + ", Alter: " + patient.getAlter());
     }
+}
+
+public void patientenHinzufuegen() {
+    Scanner scanner = new Scanner(System.in);
+    System.out.println("Bitte geben Sie den Namen des neuen Patienten ein: ");
+    String name = scanner.nextLine();
+    System.out.println("Bitte geben Sie das Alter des neuen Patienten ein: ");
+    int alter = scanner.nextInt();
+
+    // Neuen Patienten zur Liste hinzufügen
+    Patient neuerPatient = new Patient(name, alter);
+    patientenListe.add(neuerPatient);
+
+    System.out.println("Neuer Patient hinzugefügt: " + name + ", Alter: " + alter);
 }
 
 public class Patient {
