@@ -2,6 +2,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        BenutzerVerwaltung benutzerVerwaltung = new BenutzerVerwaltung(); // Objekt der neuen Klasse erstellt
+        benutzerVerwaltung.benutzerAnmeldung(); // Benutzeranmeldung aufrufen
 
         // Scanner erstellt, um Benutzereingaben zu lesen
         Scanner scanner = new Scanner(System.in);
