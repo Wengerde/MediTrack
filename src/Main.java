@@ -17,27 +17,23 @@ public class Main {
         while (programmlaeuft) {
             System.out.println("\nHauptmenü:");
             System.out.println("1. Patientenübersicht anzeigen");
-            System.out.println("2. neuen Patient hinzufügen");
-            System.out.println("3. Medikamentenübersicht anzeigen");
-            System.out.println("4. Neues Medikament hinzufügen");
-            System.out.println("5. Programm beenden");
-            System.out.println("Wählen Sie eine Option: ");
+            System.out.println("2. Neuen Patienten hinzufügen");
+            System.out.println("3. Patienten löschen");
+            System.out.println("4. Programm beenden");
+            System.out.print("Wählen Sie eine Option: ");
             int auswahl = scanner.nextInt();
 
             switch (auswahl) {
                 case 1:
-                    PatientenVerwaltung.zeigePatientenuebersicht();
+                    patientenVerwaltung.zeigePatientenUebersicht();
                     break;
                 case 2:
-                    patientenVerwaltung.patientenHinzufuegen();
+                    patientenVerwaltung.patientHinzufuegen();
                     break;
                 case 3:
-                    medikamentenVerwaltung.zeigeMedikamentenUebersicht();
+                    patientenVerwaltung.patientLoeschen();
                     break;
                 case 4:
-                    medikamentenVerwaltung.medikamentHinzufuegen();
-                    break;
-                case 5:
                     System.out.println("Programm wird beendet.");
                     programmlaeuft = false;
                     break;
