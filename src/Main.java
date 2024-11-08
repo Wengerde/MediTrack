@@ -19,7 +19,10 @@ public class Main {
             System.out.println("1. Patientenübersicht anzeigen");
             System.out.println("2. Neuen Patienten hinzufügen");
             System.out.println("3. Patienten löschen");
-            System.out.println("4. Programm beenden");
+            System.out.println("4. Medikamentenübersicht anzeigen");
+            System.out.println("5. Neues Medikament hinzufügen");
+            System.out.println("6. Medikament löschen");
+            System.out.println("7. Programm beenden");
             System.out.print("Wählen Sie eine Option: ");
             int auswahl = scanner.nextInt();
 
@@ -34,6 +37,15 @@ public class Main {
                     patientenVerwaltung.patientLoeschen();
                     break;
                 case 4:
+                    medikamentenVerwaltung.zeigeMedikamente();
+                    break;
+                case 5:
+                    medikamentenVerwaltung.medikamentHinzufuegen();
+                    break;
+                case 6:
+                    medikamentenVerwaltung.medikamentLoeschen();
+                    break;
+                case 7:
                     System.out.println("Programm wird beendet.");
                     programmlaeuft = false;
                     break;
